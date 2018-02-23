@@ -56,6 +56,50 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## More Commands - Setup Material2
 
 * npm install --save @angular/material @angular/cdk
+* ng generate module --flat app-material
+* edit src/app/app-material.module.ts - importing the controls from Material2 that you intend to use
+* Edit src/app/app.module.ts - Import
+```
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module';
+```
+* To imports and exports sections add
+```
+    BrowserAnimationsModule,
+    AppMaterialModule,
+```
 
-* Edit app.module.ts - Import
-`import {BrowserAnimationsModule} from '@angular/platform-browser/animations';`
+* Edit index.html
+Under the favicon link add
+```
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+
+* Edit styles.scss
+```
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+```
+
+* Edit app.component.html
+```
+<div style="text-align:center">
+
+<mat-toolbar color="accent">
+  <span>Logo</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="app-toolbar-filler"></span>
+  <span>Welcome</span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+```
+
+* Edit app.component.scss
+```
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+```
+
+## Next Step Fix Tests
+
