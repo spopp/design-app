@@ -1,10 +1,22 @@
 # DesignApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+
+## Versions
+* node: v9.5.0
+* Angular CLI: 1.7.1
+
+## Project Goals
+
+* Create an Angular application with Material2 using material design
+* Keep unit tests (using `ng test`) up to date and passing
+* Record each step of the process in a way that is repeatable
+* Use best code and design practices
+* Get valued feedback from others
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --open` for a dev server and open `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -28,9 +40,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Commands Issued
 
-* nvm use v9
+* nvm use v9 (I am using node version manager to select the version of node)
+
 * ng new design-app --routing --style=scss
 * cd design-app
+* ng build
+* npm install --save hammerjs
 
 # Github Setup
 * create repository design-app at https://github.com in your account
@@ -38,3 +53,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * git remote add origin git@github.com:spopp/design-app.git
 * git push -u origin master
 
+## More Commands - Setup Material2
+
+* npm install --save @angular/material @angular/cdk
+
+* Edit app.module.ts - Import
+`import {BrowserAnimationsModule} from '@angular/platform-browser/animations';`
