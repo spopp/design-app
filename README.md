@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
+## Install Angular-cli globally
+```
+npm install -g @angular/cli
+```
+
 ## Versions
 * node: v9.5.0
 * Angular CLI: 1.7.1
@@ -23,6 +28,11 @@ Run `ng serve --open` for a dev server and open `http://localhost:4200/`. The ap
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
+
+```
+npm install
+```
+
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
@@ -80,15 +90,26 @@ Under the favicon link add
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 ```
 
-* Edit app.component.html
+* Edit app.component.html adding a top toolbar and simple menu
 ```
 <div style="text-align:center">
 
 <mat-toolbar color="accent">
-  <span>Logo</span>
+
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Help</button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <span>Design App</span>
   <!-- This fills the remaining space of the current row -->
   <span class="app-toolbar-filler"></span>
-  <span>Welcome</span>
+  <span>Help</span>
+
 </mat-toolbar>
 
 <router-outlet></router-outlet>
