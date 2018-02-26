@@ -178,3 +178,10 @@ Under the favicon link add
 * Add components for each of the menu items and link them with the router
 * Remove the app.component.html simplified content to be replaced by the bullet item above
 
+## Add Header and Footer components
+```
+ng generate component layout/header --module=app
+ng generate component layout/footer --module=app
+```
+
+Move the contents of app.component.scss into layout/header/header.component.scss

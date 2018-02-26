@@ -7,11 +7,21 @@ import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HelpComponent } from './help/help.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    DashboardComponent,
+    HelpComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<mat-toolbar>
+
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button [routerLink]="['/help']" mat-menu-item>Help</button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <span>Design App</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="app-toolbar-filler"></span>
+  <span>Help</span>
+
+</mat-toolbar>
