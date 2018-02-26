@@ -141,5 +141,40 @@ Under the favicon link add
 }
 ```
 
-## Next Step Fix Tests
+* Edit app.component.html adding simplified content - until we add router based content
+
+```
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      The <em>best</em> pasta
+    </ng-template>
+    <h1>Best pasta restaurants</h1>
+    <p>...</p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>thumb_down</mat-icon> The worst sushi
+    </ng-template>
+    <h1>Terrible sushi restaurants</h1>
+    <p>...</p>
+  </mat-tab>
+</mat-tab-group>
+
+<mat-card>
+  <mat-icon>translate</mat-icon>
+  <mat-icon>hearing</mat-icon>
+  <mat-icon>audiotrack</mat-icon>
+  <mat-icon>mail</mat-icon>
+  <mat-icon>adjust</mat-icon>
+  <mat-icon>dock</mat-icon>
+  <mat-icon>camera</mat-icon>
+</mat-card>
+```
+
+## Next Steps
+* Fix the tests - run by ng test
+* Place the toolbar in its own component
+* Add components for each of the menu items and link them with the router
+* Remove the app.component.html simplified content to be replaced by the bullet item above
 
