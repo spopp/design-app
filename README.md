@@ -76,6 +76,12 @@ $ angular-cli-ghpages
 * ng build
 * npm install --save hammerjs
 
+* edit polyfills.ts and add
+```
+import 'hammerjs/hammer';
+```
+
+
 # Github Setup
 * create repository design-app at https://github.com in your account
 * git add .
@@ -182,6 +188,7 @@ Under the favicon link add
 ```
 ng generate component layout/header --module=app
 ng generate component layout/footer --module=app
+ng generate component layout/navbar --module=app
 ```
 
 Move the contents of app.component.scss into layout/header/header.component.scss
