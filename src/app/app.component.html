@@ -1,51 +1,52 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<header></header>
 
-<mat-toolbar color="accent">
+<mat-toolbar class="top-toolbar transparent-background">
 
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item>Settings</button>
-    <button mat-menu-item>Help</button>
-  </mat-menu>
+  <mat-icon>brush</mat-icon>
+  <span class="app-label">Design</span>
+
+  <span class="app-toolbar-filler"></span>
+
+  <form class="search-form">
+    <button mat-button color="accent" type="button">
+      <mat-icon>search</mat-icon>
+    </button>
+
+    <mat-form-field>
+      <input matInput class="search-box rounded">
+      <button mat-button color="accent" type="button">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+  </form>
+
+  <span class="app-toolbar-filler"></span>
 
   <button mat-icon-button [matMenuTriggerFor]="appMenu">
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon color="accent">more_vert</mat-icon>
   </button>
 
-  <span>Design App</span>
-  <!-- This fills the remaining space of the current row -->
-  <span class="app-toolbar-filler"></span>
-  <span>Help</span>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>fingerprint</mat-icon>
+      <span>Login</span>
+    </button>
+
+    <button mat-menu-item disabled>
+      <mat-icon>announcement</mat-icon>
+      <span>Issues</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+
+  </mat-menu>
 
 </mat-toolbar>
 
 <router-outlet></router-outlet>
-
-<mat-tab-group>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      The <em>best</em> pasta
-    </ng-template>
-    <h1>Best pasta restaurants</h1>
-    <p>...</p>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon>thumb_down</mat-icon> The worst sushi
-    </ng-template>
-    <h1>Terrible sushi restaurants</h1>
-    <p>...</p>
-  </mat-tab>
-</mat-tab-group>
-
-<mat-card>
-  <mat-icon>translate</mat-icon>
-  <mat-icon>hearing</mat-icon>
-  <mat-icon>audiotrack</mat-icon>
-  <mat-icon>mail</mat-icon>
-  <mat-icon>adjust</mat-icon>
-  <mat-icon>dock</mat-icon>
-  <mat-icon>camera</mat-icon>
-</mat-card>
 
 
