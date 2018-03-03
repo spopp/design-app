@@ -1,5 +1,22 @@
 
 <mat-tab-group>
+
+  <mat-tab label="Parallax Scrolling">
+    <main class="wrapper">
+      <section class="section parallax bg1">
+        <h1>Comfortable Rooms</h1>
+      </section>
+      <section class="section static">
+        <h1>Call to reserve - 1-800-111-2222</h1>
+      </section>
+      <section class="section parallax bg2">
+        <h1>Living Room</h1>
+      </section>
+    </main>
+
+  </mat-tab>
+
+
   <mat-tab label="Gallery">
     <mat-card *ngFor="let spaceScreen of spaceScreens; let i = index">
       <img mat-card-image src="{{ spaceScreen.img }}">
@@ -17,44 +34,14 @@
     </mat-card>
   </mat-tab>
 
-  <mat-tab label="Layouts">
+  <mat-tab label="Grid Layout">
     <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile>
-
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-
-      </mat-grid-tile>
+      <mat-grid-tile>1</mat-grid-tile>
       <mat-grid-tile>2</mat-grid-tile>
       <mat-grid-tile>3</mat-grid-tile>
       <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
+    </mat-grid-list>
   </mat-tab>
 
-  <mat-tab label="Settings">
-    <div id="page-padding">
-      <h1>Settings</h1>
-      <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
-      <label>Number of Thumbnails</label>
-      <mat-slider showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18"></mat-slider>
-      <mat-slide-toggle>Some setting</mat-slide-toggle>
-    </div>
-  </mat-tab>
 
 </mat-tab-group>
