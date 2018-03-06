@@ -172,6 +172,27 @@ Under the favicon link add
 </mat-card>
 ```
 
+## Add a search bar
+
+```
+ng generate component app-search-bar --module=app
+```
+
+
+## Deploy to Github Pages
+
+```
+npm i -g angular-cli-ghpages
+
+mkdir dist
+
+
+ng build --prod --base-href "https://spopp.github.io/design-app/"
+ngh
+```
+
+
+
 ## Next Steps
 * Fix the tests - run by ng test
 * Place the toolbar in its own component
