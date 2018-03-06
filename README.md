@@ -49,8 +49,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ```
 npm i -g angular-cli-ghpages
 
-$ ng build --prod --base-href="https://YOURUSERNAME.github.io/REPO-NAME/"
+mkdir dist
 
+# Example builid
+ng build --prod --base-href "https://spopp.github.io/design-app/"
+
+# Example deploy
+ngh
 ```
 
 ### Setup for deploy
@@ -59,11 +64,6 @@ $ git add .
 $ git commit -m "first commit"
 $ git remote add origin git@github.com:yourinfo/yourgit.git
 $ git push -u origin master
-```
-
-### Deploy to Github Pages
-```
-$ angular-cli-ghpages
 ```
 
 
@@ -176,19 +176,6 @@ Under the favicon link add
 
 ```
 ng generate component app-search-bar --module=app
-```
-
-
-## Deploy to Github Pages
-
-```
-npm i -g angular-cli-ghpages
-
-mkdir dist
-
-
-ng build --prod --base-href "https://spopp.github.io/design-app/"
-ngh
 ```
 
 
