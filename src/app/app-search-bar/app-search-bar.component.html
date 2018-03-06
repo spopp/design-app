@@ -1,0 +1,7 @@
+<mat-form-field class="search_field transparent-background" [@slideInOut]="searchVisible">
+    <input #input matInput type="text" placeholder="" (blur)="onBlurring(input.value)" (keyup.enter)="onEnterring(input.value)" (focus)="onFocussing(input.value)" />
+</mat-form-field>
+<span class="search_icons" [class.search_icons--active]="searchVisible">
+  <mat-icon class="search_icon-close" (click)="close()" matRipple>close</mat-icon>
+  <mat-icon class="search_icon-search" (click)="open()" matRipple>search</mat-icon>
+</span>

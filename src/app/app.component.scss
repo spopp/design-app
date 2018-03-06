@@ -15,10 +15,6 @@ header {
   width: 100%  !important;
 }
 
-.transparent-background { 
-  background-color: rgba(0, 0, 0, 0);
-}
-
 .app-label {
   color: yellow;
 }
@@ -27,14 +23,7 @@ header {
   flex: 1 1 auto;
 }
 
-.search-box {
-  background: white;
-}
-
-.rounded {
-    width: 100%;
-    border-radius: 15px;
-    border: 1px #000 solid;
-    padding: 5px 5px 5px 25px;
+.transparent-background { 
+  background-color: rgba(0, 0, 0, 0);
 }
 

@@ -10,12 +10,14 @@ import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppSearchBarComponent } from './app-search-bar/app-search-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    AppSearchBarComponent
   ],
   imports: [
     BrowserModule,
